@@ -1,0 +1,154 @@
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fbf0db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        max-width: 130rem;
+        padding: 7rem 7.5rem;
+        display: flex;
+        width: 50rem;
+        gap: 2.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        background-color: white;
+
+        .headings{
+            //margin-bottom: 1.5rem;
+            .headingPrimary {
+                font-size: 3rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                color: rgba(0,0,0,0.75);
+            }
+            .headingSecondary {
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: rgba(0,0,0,0.4);
+                margin-bottom: 1.5rem;
+            }
+            .error {
+                font-size: 1.2rem;
+                color: #ff3838;
+            }
+        }
+        .inputFields {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .inputField {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: rgba(0,0,0,0.75);
+                }
+                input {
+                    outline: none;
+                    border: 1px solid rgba(0,0,0,0.2);
+                    border-radius: .35rem;
+                    padding: 1rem 1.5rem;
+                    font-size: 1.4rem;
+
+                    &::placeholder {
+                        color: rgba(0,0,0,0.2);
+                    }
+                }
+            }
+        }
+        .actionsPrimary {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .btn {
+                background-color: #ffb326;
+                padding: 1rem 1.5rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: white;
+                transition: 1s;
+                cursor: pointer;
+                &2 {
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    gap: 1rem;
+                    align-items: center;
+                    padding: 1rem 1.5rem;
+                    border: 1px solid rgba(0,0,0,0.4);
+                    border-radius: .35rem;
+                    transition: .5s;
+                    img {
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                    span {
+                        color: rgba(0,0,0,0.5);
+                        font-size: 1.4rem;
+                    }
+                    &:hover {
+                        border: 1px solid rgba(0,0,0,0.6);
+                        span {
+                            color: rgba(0,0,0,0.6);
+                        }
+                    }
+                }
+            }
+            .or {
+                font-size: 1.4rem;
+                color: rgba(0,0,0,0.5);
+                position: relative;
+                text-align: center;
+                &::before,
+                &::after{
+                    content: "";
+                    display: block;
+                    height: .05rem;
+                    width: 44%;
+                    background-color: rgba(0,0,0,0.5);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &::before{
+                    left: 0;
+                }
+                &::after{
+                    right: 0;
+                }
+            }
+        }
+        .actionsSecondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            span {
+                font-size: 1.2rem;
+                &:nth-child(1){
+                    color: rgba(0,0,0,0.5);
+                }
+                &:nth-child(2){
+                    color: #faa70e;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width:400px) {
+    .wrapper{
+        //padding: 7rem 2.5rem !important;
+        width: 40rem !important;
+    }  
+
+  }
